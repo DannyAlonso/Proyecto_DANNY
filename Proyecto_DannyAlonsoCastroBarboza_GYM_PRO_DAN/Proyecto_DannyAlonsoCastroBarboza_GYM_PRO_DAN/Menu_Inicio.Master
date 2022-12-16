@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Menu_Inicio.Master.cs" Inherits="Proyecto_DannyAlonsoCastroBarboza_GYM_PRO_DAN.Inicio" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">   
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+     <link href="css/menu.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/util.css" rel="stylesheet" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+               <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+        <div>
+     
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <body>
+
+<div class="sidenav">
+  <a href="Inicio.aspx">Inicio</a>
+  <a href="#services">Detalle de facturacion</a>
+  <a href="Facturacion.aspx">Facturacion</a>
+  <a href="Facturacion.aspx">Productos</a>
+  <button class="dropdown-btn">
+      Catalogos 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="Usuarios.aspx">Usuarios</a>
+    <a href="Clientes.aspx">Clientes</a>  
+    <a href="Provincia.aspx">Provincia</a>
+    <a href="Canton.aspx">Canton</a>
+    <a href="Distrito.aspx">Distrito</a>
+   <a href="Direcciones.aspx">Direccion</a>
+  </div> 
+  <a href="Ingreso.aspx">Salir</a>
+
+    </div>
+</div>
+<script>
+    /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+</script>
+
+</body>
+        </div>
+    </form>
+</body>
+</html>
